@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 /*
 Components
 */
-import { AccountComponent } from '../account/account.component';
+import { AccountComponent } from '../pages/account/account.component';
 
 /*
 The route guard CanDeactivate check wheter a user can exit the route
@@ -20,6 +20,11 @@ export class CanDeactivateGuard implements CanDeactivate<AccountComponent> {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot):
     Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      /*
+      console.log(currentRoute);
+      console.log(currentState);
+      console.log(nextState);
+      */
       return component.exit();
   }
 
