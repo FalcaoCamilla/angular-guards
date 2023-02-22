@@ -7,6 +7,9 @@ Components
 */
 import { AccountComponent } from '../account/account.component';
 
+/*
+The route guard CanDeactivate check wheter a user can exit the route
+*/
 @Injectable({
   providedIn: 'root'
 })
