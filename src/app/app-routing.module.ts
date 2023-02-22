@@ -7,6 +7,7 @@ import { AccountComponent } from './shared/pages/account/account.component';
 import { CanActivateGuard } from './shared/guards/can-activate.guard';
 import { CanDeactivateGuard } from './shared/guards/can-deactivate.guard';
 import { CanLoadGuard } from './shared/guards/can-load.guard';
+import { CanActivateChildGuard } from './shared/guards/can-activate-child.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,7 +15,7 @@ const routes: Routes = [
   canActivate: [CanActivateGuard], canDeactivate: [CanDeactivateGuard]},
   {path: 'core', loadChildren: () =>
   import('./core/core.module').then((m) => m.CoreModule),
-  canLoad: [CanLoadGuard]},
+  canLoad: [CanLoadGuard], canActivateChild: [CanActivateChildGuard]},
 ];
 
 @NgModule({
