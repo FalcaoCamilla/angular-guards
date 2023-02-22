@@ -16,7 +16,7 @@ export class CanActivateChildGuard implements CanActivateChild {
     Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       /*
       console.log(childRoute);
-      console.log(state);
+      console.log(state)
       */
 
       if(
